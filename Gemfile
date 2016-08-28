@@ -8,10 +8,11 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'devise'
-gem 'cancancan', '~> 1.10'
+gem 'foundation-rails'
+gem 'haml-rails', '~> 0.9'
 
 group :development, :test do
-  gem 'pry-rails'
+  gem 'byebug', platform: :mri
 end
 
 group :development do
