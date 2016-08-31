@@ -10,6 +10,10 @@ gem 'turbolinks', '~> 5'
 gem 'devise'
 gem 'foundation-rails'
 gem 'haml-rails', '~> 0.9'
+gem 'paperclip', '~> 5.0.0'
+gem 'sidekiq'
+gem 'fullcalendar-rails'
+gem 'momentjs-rails'
 
 group :development, :test do
   gem 'byebug', platform: :mri
