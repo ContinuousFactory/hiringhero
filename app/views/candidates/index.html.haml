@@ -1,19 +1,38 @@
-%h1 Listing candidates
+%br/
 
-%table
+%ul.breadcrumbs
+  %li
+    %a{:href => root_path} Home
+  %li.disabled All candidates
+
+%h4 All candidates
+
+= link_to new_candidate_path, class: 'button' do
+  %i.fi-plus
+    Add new candidate
+
+%br/
+
+%table.stack
   %thead
     %tr
-      %th
+      %th Preview
+      %th Name
+      %th Email
       %th
       %th
 
   %tbody
     - @candidates.each do |candidate|
       %tr
-        %td= link_to 'Show', candidate
-        %td= link_to 'Edit', edit_candidate_path(candidate)
-        %td= link_to 'Destroy', candidate, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= image_tag candidate.resume.url(:thumbnail)
+        %td= candidate.name
+        %td= candidate.email
+        %td
+          = link_to edit_candidate_path(candidate) do
+            %i.fi-page-edit
+        %td
+          = link_to candidate, method: :delete, data: { confirm: 'Are you sure?' } do
+            %i.fi-trash
 
 %br
-
-= link_to 'New Candidate', new_candidate_path

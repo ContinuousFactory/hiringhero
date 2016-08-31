@@ -1,5 +1,12 @@
-%h1 New candidate
+%br/
+
+%ul.breadcrumbs
+  %li
+    %a{:href => root_path } Home
+  %li
+    %a{:href => candidates_path } Candidates
+  %li.disabled Add new
+
+%h4 New candidate
 
 = render 'form'
-
-= link_to 'Back', candidates_path

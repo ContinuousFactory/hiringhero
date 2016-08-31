@@ -2,12 +2,20 @@
   .top-bar-left
     %ul.dropdown.menu{"data-dropdown-menu" => ""}
       %li.menu-text Hiring Hero
+
+  .top-bar-right{"data-dropdown-menu" => ""}
+    %ul.menu.dropdown
       %li
-        %a{:href => "#"} Dashboard
-      %li
-        %a{:href => "#"} Team
-      %li
-        %a{:href => "#"} About
+        - if current_user
+          %a{:href => "#"}= current_user.email
+          %ul.menu
+            %li
+              %a{ href: '#' } Settings
+            %li
+              = link_to('Logout', destroy_user_session_path, method: :delete)
+        - else
+          = link_to('Login', new_user_session_path)
+
   .top-bar-right
     %ul.menu
       %li

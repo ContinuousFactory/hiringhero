@@ -1,7 +1,12 @@
-%h1 Editing candidate
+%br/
+
+%ul.breadcrumbs
+  %li
+    %a{:href => root_path } Home
+  %li
+    %a{:href => candidates_path } Candidates
+  %li.disabled Edit
+
+%h4 Edit
 
 = render 'form'
-
-= link_to 'Show', @candidate
-\|
-= link_to 'Back', candidates_path

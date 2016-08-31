@@ -1,25 +1,17 @@
 class CandidatesController < ApplicationController
   before_action :set_candidate, only: [:show, :edit, :update, :destroy]
 
-  # GET /candidates
   def index
     @candidates = Candidate.all
   end
 
-  # GET /candidates/1
-  def show
-  end
-
-  # GET /candidates/new
   def new
     @candidate = Candidate.new
   end
 
-  # GET /candidates/1/edit
   def edit
   end
 
-  # POST /candidates
   def create
     @candidate = Candidate.new(candidate_params)
 
@@ -30,7 +22,6 @@ class CandidatesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /candidates/1
   def update
     if @candidate.update(candidate_params)
       redirect_to @candidate, notice: 'Candidate was successfully updated.'
@@ -39,7 +30,6 @@ class CandidatesController < ApplicationController
     end
   end
 
-  # DELETE /candidates/1
   def destroy
     @candidate.destroy
     redirect_to candidates_url, notice: 'Candidate was successfully destroyed.'
@@ -52,6 +42,6 @@ class CandidatesController < ApplicationController
   end
 
   def candidate_params
-    params.fetch(:candidate, {})
+    params.require(:candidate).permit(:name, :email, :note, :resume)
   end
 end

@@ -45,11 +45,11 @@ GEM
       execjs (~> 2.0)
     bcrypt (3.1.11)
     builder (3.2.2)
-    byebug (9.0.5)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.8)
       climate_control (>= 0.0.3, < 1.0)
+    coderay (1.1.1)
     concurrent-ruby (1.0.2)
     connection_pool (2.2.0)
     devise (4.2.0)
@@ -61,6 +61,9 @@ GEM
     erubis (2.7.0)
     execjs (2.7.0)
     ffi (1.9.14)
+    foundation-icons-sass-rails (3.0.0)
+      railties (>= 3.1.1)
+      sass-rails (>= 3.1.1)
     foundation-rails (6.2.3.0)
       railties (>= 3.1.0)
       sass (>= 3.3.0, < 3.5)
@@ -120,6 +123,12 @@ GEM
       mimemagic (~> 0.3.0)
     pg (0.18.4)
     pkg-config (1.1.7)
+    pry (0.10.4)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    pry-rails (0.3.4)
+      pry (>= 0.9.10)
     puma (3.6.0)
     rack (2.0.1)
     rack-test (0.6.3)
@@ -168,6 +177,7 @@ GEM
       concurrent-ruby (~> 1.0)
       connection_pool (~> 2.2, >= 2.2.0)
       redis (~> 3.2, >= 3.2.1)
+    slop (3.6.0)
     spring (1.7.2)
     spring-watcher-listen (2.0.0)
       listen (>= 2.7, < 4.0)
@@ -203,8 +213,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  byebug
   devise
+  foundation-icons-sass-rails
   foundation-rails
   fullcalendar-rails
   haml-rails (~> 0.9)
@@ -213,6 +223,7 @@ DEPENDENCIES
   momentjs-rails
   paperclip (~> 5.0.0)
   pg (~> 0.18)
+  pry-rails
   puma (~> 3.0)
   rails (~> 5.0.0, >= 5.0.0.1)
   sass-rails (~> 5.0)
