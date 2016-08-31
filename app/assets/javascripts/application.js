@@ -15,6 +15,7 @@
 //= require foundation
 //= require moment
 //= require fullcalendar
+//= require trix
 //= require turbolinks
 //= require_tree .
 

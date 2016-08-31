@@ -1,0 +1,14 @@
+%br/
+
+%ul.breadcrumbs
+  %li
+    %a{:href => root_path } Home
+  %li
+    %a{:href => candidates_path } Candidates
+  %li.disabled Show
+
+%h5= @candidate.name
+%h5= @candidate.email
+
+%h3 Note
+%p= @candidate.note.html_safe

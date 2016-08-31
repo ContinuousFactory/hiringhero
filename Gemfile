@@ -15,6 +15,7 @@ gem 'paperclip', '~> 5.0.0'
 gem 'sidekiq'
 gem 'fullcalendar-rails'
 gem 'momentjs-rails'
+gem 'trix'
 
 group :development, :test do
   gem 'pry-rails'

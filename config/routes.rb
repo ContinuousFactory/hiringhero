@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: 'dashboard#index'
   get 'dashboard/calendar'
-  resources :candidates, except: :show
+  resources :candidates
 
   devise_for :users
 
