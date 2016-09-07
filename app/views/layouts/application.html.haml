@@ -8,16 +8,18 @@
     %title= content_for?(:title) ? yield(:title) : 'Hiring Hero'
 
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+
     = csrf_meta_tag
 
   %body
     = render 'shared/topbar'
 
-    .row.expanded
-      .large-2.columns.no-sides-padding
+    #main-container.row.expanded
+      #main-sidebar.large-2.columns.no-sides-padding.main-theme-color
         = render 'shared/sidebar'
-      .large-10.columns
+      .large-10.columns.white-bg
         = yield
 
     = render 'shared/footer'
+
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'

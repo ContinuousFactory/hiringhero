@@ -52,4 +52,13 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  # config.paperclip_defaults = {
+  #   storage: :fog,
+  #   fog_credentials: {
+  #     provider: 'AzureRM',
+  #     azure_storage_account_name: ENV['azure_storage_account_name'],
+  #     azure_storage_access_key: ENV['azure_storage_access_key']
+  #   }
+  # }
 end

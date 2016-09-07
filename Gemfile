@@ -16,6 +16,9 @@ gem 'sidekiq'
 gem 'fullcalendar-rails'
 gem 'momentjs-rails'
 gem 'trix'
+gem 'fog'
+gem 'fog-azure-rm'
+gem 'figaro'
 
 group :development, :test do
   gem 'pry-rails'

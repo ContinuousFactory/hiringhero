@@ -19,4 +19,7 @@
 //= require turbolinks
 //= require_tree .
 
-$(function(){ $(document).foundation(); });
+$(function(){
+  $(document).foundation();
+  $('#main-sidebar').css('height', $('#main-container').height());
+});
