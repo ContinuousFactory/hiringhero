@@ -30,3 +30,7 @@
 .normal-style {
   font-style: normal;
 }
+
+.align-left {
+  text-align: left;
+}
